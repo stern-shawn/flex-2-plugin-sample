@@ -1,3 +1,4 @@
+import { combineReducers } from '@reduxjs/toolkit';
 import customTaskReducer, { dismiss } from './slices/customTaskListState';
 
 export const actions = {
@@ -6,6 +7,6 @@ export const actions = {
   },
 };
 
-export const reducers = {
+export const reducers = combineReducers({
   customTaskList: customTaskReducer,
-};
+});

@@ -47,8 +47,6 @@ export default class SamplePlugin extends FlexPlugin {
       return;
     }
 
-    for (const [reducerName, reducer] of Object.entries(reducers)) {
-      manager.store.addReducer(reducerName, reducer);
-    }
+    manager.store.addReducer('myPluginNamespace', reducers);
   }
 }
