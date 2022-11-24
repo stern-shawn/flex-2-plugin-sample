@@ -7,7 +7,9 @@ import { Text } from '@twilio-paste/core/text';
 import { actions } from '../../store';
 
 const CustomTaskList = () => {
-  const isOpen = useSelector((state) => state.customTaskList.isOpen);
+  const isOpen = useSelector(
+    (state) => state.myPluginNamespace.customTaskList.isOpen
+  );
   const dispatch = useDispatch();
 
   const dismiss = useCallback(() => {
